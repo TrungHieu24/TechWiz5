@@ -1,0 +1,254 @@
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 8px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #c29d59;
+    color: aliceblue;
+    border-radius: 5px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+
+
+
+  /*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--black-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+.login-drop, .register-drop {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/*=============== forgot ===============*/
+.forgot{
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.forgot__form {
+  position: relative;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  border: 2px solid var(--black-color);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+}
+.forgot__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 2rem;
+}
+.forgot__content, .forgot__box {
+  display: grid;
+}
+.forgot__content {
+  row-gap: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.forgot__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid var(--black-color);
+}
+.forgot__icon, .forgot__eye {
+  font-size: 1.25rem;
+}
+.forgot__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: var(--black-color);
+  position: relative;
+  z-index: 1;
+}
+.forgot__box-input {
+  position: relative;
+}
+.forgot__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: var(--font-medium);
+  transition: top 0.3s, font-size 0.3s;
+}
+.forgot__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.forgot__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+.forgot__check, .forgot__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.forgot__check {
+  margin-bottom: 1.5rem;
+}
+.forgot__check-label, .forgot__forgot, .forgot__register {
+  font-size: var(--small-font-size);
+}
+.forgot__check-group {
+  column-gap: 0.5rem;
+}
+.forgot__check-input {
+  width: 16px;
+  height: 16px;
+}
+.forgot__forgot {
+  color: var(--black-color);
+}
+.forgot__forgot:hover {
+  text-decoration: underline;
+}
+.forgot__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.forgot__register {
+  text-align: center;
+}np
+.forgot__register a {
+  color: var(--black-color);
+  font-weight: var(--font-medium);
+}
+.forgot__register a:hover {
+  text-decoration: underline;
+}
+
+.forgot__input:focus + .forgot__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+
+/* Input focus sticky top label */
+.forgot__input:not(:placeholder-shown).forgot__input:not(:focus) + .forgot__label {
+  top: -12px;
+  font-size: var(--small-font-size);
+}
+@media screen and (min-width: 576px) {
+  .forgot {
+    justify-content: center;
+  }
+  .forgot__form {
+    width: 432px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 1.5rem;
+  }
+  .forgot__title {
+    font-size: 2rem;
+  }
+}
+.scroll-container {
+  overflow-x: auto; 
+  white-space: nowrap;
+  max-width: 100%; 
+  box-sizing: border-box; 
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 1px; 
+}
+ 
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px; 
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.scroll-container {
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #f1f1f1; 
+}
